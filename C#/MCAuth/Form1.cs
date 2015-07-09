@@ -35,7 +35,7 @@ namespace MCAuth
                 Mes.Append("name:").Append(AuthData.selectedProfile.name).Append("\n");
                 Mes.Append("uuid:").Append(AuthData.selectedProfile.id).Append("\n");
                 Mes.Append("token:").Append(AuthData.clientToken);
-                if (AuthData.twitch(AuthData.user) != "")
+                if (AuthData.twitch(AuthData.user) != null)
                 {
                     Mes.Append("\n").Append("twitch:").Append(AuthData.twitch(AuthData.user));
                 }

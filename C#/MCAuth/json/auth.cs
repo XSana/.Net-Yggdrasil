@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
+using System.Windows.Forms;
 
 namespace MCAuth.json
 {
@@ -25,7 +26,7 @@ namespace MCAuth.json
         /// <returns>成功返回传递参数，失败返回nul</returns>
         public String twitch(user user)
         {
-            if (user != null)
+            if (user.properties != null)
             {
                 StringBuilder twitchData = new StringBuilder();
                 twitchData.Append("{\"");

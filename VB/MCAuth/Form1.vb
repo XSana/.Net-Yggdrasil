@@ -23,7 +23,7 @@ Public Class Form1
             Mes.Append("name:").Append(AuthData.selectedProfile.name).Append(vbLf)
             Mes.Append("uuid:").Append(AuthData.selectedProfile.id).Append(vbLf)
             Mes.Append("token:").Append(AuthData.clientToken)
-            If AuthData.twitch(AuthData.user) <> "" Then
+            If AuthData.twitch(AuthData.user) <> Nothing Then
                 Mes.Append(vbLf).Append("twitch:").Append(AuthData.twitch(AuthData.user))
             End If
             MessageBox.Show(Mes.ToString())

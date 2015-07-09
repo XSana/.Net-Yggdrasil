@@ -20,7 +20,7 @@ Namespace json
         ''' <returns>成功返回传递参数，失败返回null</returns>
         ''' <remarks></remarks>
         Public Function twitch(user As user) As [String]
-            If user IsNot Nothing Then
+            If user.properties IsNot Nothing Then
                 Dim twitchData As New StringBuilder()
                 twitchData.Append("{""")
                 twitchData.Append(user.properties(0).name)
