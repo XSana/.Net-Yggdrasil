@@ -22,10 +22,7 @@ Namespace json
         Public Function twitch(user As user) As [String]
             If user.properties IsNot Nothing Then
                 Dim twitchData As New StringBuilder()
-                twitchData.Append("{""")
-                twitchData.Append(user.properties(0).name)
-                twitchData.Append(""":[""").Append(user.properties(0).value)
-                twitchData.Append("""]}")
+                twitchData.Append("{""").Append(user.properties(0).name).Append(""":[""").Append(user.properties(0).value).Append("""]}")
                 Return twitchData.ToString()
             Else
                 Return Nothing

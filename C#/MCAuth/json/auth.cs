@@ -29,10 +29,7 @@ namespace MCAuth.json
             if (user.properties != null)
             {
                 StringBuilder twitchData = new StringBuilder();
-                twitchData.Append("{\"");
-                twitchData.Append(user.properties[0].name);
-                twitchData.Append("\":[\"").Append(user.properties[0].value);
-                twitchData.Append("\"]}");
+                twitchData.Append("{\"").Append(user.properties[0].name).Append("\":[\"").Append(user.properties[0].value).Append("\"]}");
                 return twitchData.ToString();
             }
             else
